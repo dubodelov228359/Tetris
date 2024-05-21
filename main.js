@@ -243,6 +243,12 @@ document.addEventListener('keydown', event => {
     }
 });
 
+// Добавляем обработчики событий для виртуальных кнопок управления
+document.getElementById('leftButton').addEventListener('click', () => playerMove(-1));
+document.getElementById('rightButton').addEventListener('click', () => playerMove(1));
+document.getElementById('downButton').addEventListener('click', playerDrop);
+document.getElementById('rotateButton').addEventListener('click', () => playerRotate(1));
+
 playerReset();
 updateScore();
 update();
